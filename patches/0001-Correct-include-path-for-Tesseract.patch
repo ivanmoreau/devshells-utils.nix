@@ -1,0 +1,40 @@
+diff --git a/cmake_modules/FindTesseract.cmake b/cmake_modules/FindTesseract.cmake
+index 3c73816..dcce937 100644
+--- a/cmake_modules/FindTesseract.cmake
++++ b/cmake_modules/FindTesseract.cmake
+@@ -23,7 +23,7 @@ find_path(Tesseract_INCLUDE_BASEAPI_DIR
+ 		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/api/
+ )
+ find_path(Tesseract_INCLUDE_CCSTRUCT_DIR
+-  NAMES publictypes.h
++  NAMES tesseract/publictypes.h
+   HINTS "/usr/include"
+         "/usr/include/tesseract"
+         "/usr/local/include"
+@@ -34,7 +34,7 @@ find_path(Tesseract_INCLUDE_CCSTRUCT_DIR
+ 		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/ccstruct/
+ )
+ find_path(Tesseract_INCLUDE_CCMAIN_DIR
+-  NAMES thresholder.h
++  NAMES tesseract/thresholder.h
+   HINTS "/usr/include"
+         "/usr/include/tesseract"
+         "/usr/local/include"
+@@ -45,7 +45,7 @@ find_path(Tesseract_INCLUDE_CCMAIN_DIR
+ 		${CMAKE_SOURCE_DIR}/../libraries/tesseract-ocr/ccmain/
+ )
+ find_path(Tesseract_INCLUDE_CCUTIL_DIR
+-  NAMES platform.h
++  NAMES tesseract/platform.h
+   HINTS "/usr/include"
+         "/usr/include/tesseract"
+         "/usr/local/include"
+@@ -69,7 +69,7 @@ find_library(Tesseract_LIB
+ )
+ 
+ find_library(Leptonica_LIB
+-  NAMES liblept170 liblept lept
++  NAMES liblept170 liblept lept leptonica libleptonica
+   HINTS "/usr/lib"
+         "/usr/local/lib"
+         "/opt/local/lib"
